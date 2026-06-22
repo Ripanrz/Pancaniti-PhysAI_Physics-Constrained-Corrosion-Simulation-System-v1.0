@@ -58,12 +58,12 @@ Pengujian mandiri tanpa pasokan data eksternal untuk melihat konsistensi hukum f
 
 ```mermaid
 graph TD
-    A[(Data Simulasi 2D Korosi)] -->|Group-based Splitting via ID| B(Pipeline Bebas Leakage)
-    B -->|Training Input| C[CNN Surrogate Model <br> Residual Learning + Softplus]
-    C -->|Optimasi Spasial & Fisika| D{Active Front Weighted Loss <br> Penalti 26x + Hukum Δ ≥ 0}
-    D -->|Akselerasi GPU T4| E[Model Matang / Terlatih]
-    E -->|Evaluasi Jangka Panjang| F[Autoregressive Rollout 15 Langkah]
-    F -->|Hasil Akhir| G[Akurasi 96% & Konsisten secara Fisis]
+    A[("Data Simulasi<br>2D Korosi")] -->|Group-based<br>Splitting via ID| B("Pipeline<br>Bebas Leakage")
+    B -->|Training Input| C["CNN Surrogate Model<br>Residual Learning + Softplus"]
+    C -->|Optimasi Spasial<br>& Fisika| D{"Active Front<br>Weighted Loss<br>Penalti 26x<br>Hukum Δ ≥ 0"}
+    D -->|Akselerasi<br>GPU T4| E["Model Matang<br>/ Terlatih"]
+    E -->|Evaluasi<br>Jangka Panjang| F["Autoregressive Rollout<br>15 Langkah"]
+    F -->|Hasil Akhir| G["Akurasi 95.9% &<br>Konsisten secara Fisis"]
 
     style A fill:#20beff,stroke:#fff,stroke-width:2px,color:#fff
     style D fill:#ff8c00,stroke:#fff,stroke-width:2px,color:#fff
